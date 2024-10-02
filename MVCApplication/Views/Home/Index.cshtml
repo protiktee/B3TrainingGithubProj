@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    #gvSet {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+        #gvSet td, #gvSet th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #gvSet tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #gvSet tr:hover {
+            background-color: #ddd;
+        }
+
+        #gvSet th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+</style>
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+
+
+    <input type="text" id="txtA" name="txtA" />
+    <input type="text" id="txtB" name="txtB" />
+    <input type="submit" value="Sum" name="submit"/>
+    string output = "";
+    if (ViewBag.Output!=null)
+    {
+         output = (string)ViewBag.Output;
+    }
+
+    @Html.Raw(output)
+
+    <hr />
+
+    <input type="submit" value="Query Data" name="submit"/>
+    <hr />
+    string data = "";
+    if (ViewBag.pData!=null)
+    {
+        System.Data.DataTable pdata = (System.Data.DataTable)ViewBag.pData;
+         data = MVCViewToolKit.DynamicTableMaker.MakeTableDynamic(ViewBag.pData);
+    }
+
+    <table ID="gvSet">
+        @Html.Raw(data)
+    </table>
+}
