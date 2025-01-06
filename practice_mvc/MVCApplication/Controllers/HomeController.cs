@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVCApplication.Model;
 
 namespace MVCApplication.Controllers
 {
@@ -14,7 +15,8 @@ namespace MVCApplication.Controllers
         public ActionResult Index()
         {
             string ssds = "";
-            DataTable dt = fetchData();
+            TestModel ss = new TestModel();
+            DataTable dt = ss.fetchData();
             ViewBag.pData = dt;
             return View();
         }
@@ -28,12 +30,18 @@ namespace MVCApplication.Controllers
                 ViewBag.Output = (a + b).ToString();
             }
             //ViewBag.Output
-            if (submit == "Query Data")
-            {
-                DataTable dt = fetchData();
-                ViewBag.pData = dt;
-            }
-           
+            //if (submit == "Query Data")
+            //{
+            //    TestModel ss = new TestModel();
+            //    DataTable dt = ss.fetchData();
+            //    ViewBag.pData = dt;
+            //}
+            string ssds = "";
+            TestModel ss = new TestModel();
+            DataTable dt = ss.fetchData();
+            ViewBag.pData = dt;
+
+
             return View();
         }
         public ActionResult About()
@@ -49,26 +57,6 @@ namespace MVCApplication.Controllers
 
             return View();
         }
-        private DataTable fetchData()
-        {
-            DataTable dataTable = new DataTable();
-
-            // Define the connection string
-            string connectionstring = ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
-
-            // Create a SQL connection object
-            SqlConnection connection = new SqlConnection(connectionstring);
-            connection.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = connection;
-            cmd.CommandText = "dbo.spOst_LstMember";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandTimeout = 0;
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(dataTable);
-            cmd.Dispose();
-            connection.Close();
-            return dataTable;
-        }
+        
     }
 }

@@ -1,0 +1,40 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    string queryProductId = "1";
+
+}
+
+<script>
+
+    var LstHeading = [];
+    $(document).ready(function() {
+
+        var data = '';
+
+        $.get("https://dummyjson.com/products/@queryProductId", function(obj) {
+             data = data + `
+                     <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="${obj.thumbnail}" alt="Card image cap">
+                                <div class="card-body">
+                                        <h5 class="card-title">${obj.title}</h5>
+                                        <p class="card-text" id="price">${obj.price}</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+            $('#dvProducts').append(data);
+        })
+    })
+
+</script>
+
+<div id="dvContent" class="text-center">
+    <div class="row" id="dvProducts">
+    </div>
+</div>

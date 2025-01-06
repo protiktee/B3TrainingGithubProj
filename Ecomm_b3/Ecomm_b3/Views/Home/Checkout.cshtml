@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<script src="~/js/controller/productcontroller.js"></script>
+<script src="~/js/controller/cartcontroller.js"></script>
+
+<script>
+    $(document).ready(function () { 
+        let Products = CartController.ShowCart();
+        let trs = '';
+        $.each(Products, function (index, obj) { 
+            trs = trs + `<tr><td><img style='width:200px' src="${obj.thumbnail}"></td><td>${obj.title}</td><td>${obj.price}</td><td><a onclick='CartController.DeleteFromCart(${obj.id});$($(this).parent().parent()).remove()'>Delete</a></td></tr>`;
+        })
+        $('#tblcartProduct').append(trs);
+    })
+</script>
+
+<style>
+    #tblcartProduct {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        display: table;
+        border: 1px solid #ccc;
+    }
+
+    #tblcartProduct th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+        #tblcartProduct td, #tblcartProduct th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+</style>
+<div id="dvCartProducts">
+    <table id="tblcartProduct">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Delete</th>
+        </tr>
+    </table>
+</div>
