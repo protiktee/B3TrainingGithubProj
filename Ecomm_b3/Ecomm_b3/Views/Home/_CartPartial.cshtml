@@ -1,3 +1,34 @@
-﻿<div id="dvCart" style="position:fixed;top:0px;bottom:0px;width:400px;background: orange;right: -400px;">
+﻿
+<style>
+    #tblPartialCartProduct {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        display: table;
+        border: 1px solid #ccc;
+    }
+
+        #tblPartialCartProduct th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        #tblPartialCartProduct td, #tblPartialCartProduct th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+</style>
+<div id="dvCart" style="position:fixed;top:0px;bottom:0px;width:400px;background: orange;right: -400px;">
     <a class="nav-link text-dark" onclick="$('#dvCart').animate({right:-400})">Close Cart</a>
+
+    <div id="dvPartialCartProducts">
+        <table id="tblPartialCartProduct">
+           
+        </table>
+    </div>
 </div>

@@ -1,0 +1,147 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|e:\\ostad\\training\\b3\\webappupload\\webappupload\\models\\baseproductimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|solutionrelative:webappupload\\models\\baseproductimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|e:\\ostad\\training\\b3\\webappupload\\webappupload\\models\\baseproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|solutionrelative:webappupload\\models\\baseproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|e:\\ostad\\training\\b3\\webappupload\\webappupload\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|solutionrelative:webappupload\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|e:\\ostad\\training\\b3\\webappupload\\webappupload\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|solutionrelative:webappupload\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|e:\\ostad\\training\\b3\\webappupload\\webappupload\\models\\baseproducttag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|solutionrelative:webappupload\\models\\baseproducttag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|e:\\ostad\\training\\b3\\webappupload\\webappupload\\models\\baseproductreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|solutionrelative:webappupload\\models\\baseproductreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|e:\\ostad\\training\\b3\\webappupload\\webappupload\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E3A651F0-C98E-4DE9-BECF-5E8229CAA5F0}|WebAppUpload\\WebAppUpload.csproj|solutionrelative:webappupload\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Web.config",
+              "DocumentMoniker": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Web.config",
+              "RelativeDocumentMoniker": "WebAppUpload\\Web.config",
+              "ToolTip": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Web.config",
+              "RelativeToolTip": "WebAppUpload\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-12-23T16:58:13.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaseProductImage.cs",
+              "DocumentMoniker": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Models\\BaseProductImage.cs",
+              "RelativeDocumentMoniker": "WebAppUpload\\Models\\BaseProductImage.cs",
+              "ToolTip": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Models\\BaseProductImage.cs",
+              "RelativeToolTip": "WebAppUpload\\Models\\BaseProductImage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:51:40.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BaseProductReview.cs",
+              "DocumentMoniker": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Models\\BaseProductReview.cs",
+              "RelativeDocumentMoniker": "WebAppUpload\\Models\\BaseProductReview.cs",
+              "ToolTip": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Models\\BaseProductReview.cs",
+              "RelativeToolTip": "WebAppUpload\\Models\\BaseProductReview.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:51:25.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseProductTag.cs",
+              "DocumentMoniker": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Models\\BaseProductTag.cs",
+              "RelativeDocumentMoniker": "WebAppUpload\\Models\\BaseProductTag.cs",
+              "ToolTip": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Models\\BaseProductTag.cs",
+              "RelativeToolTip": "WebAppUpload\\Models\\BaseProductTag.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:51:04.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BaseProduct.cs",
+              "DocumentMoniker": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Models\\BaseProduct.cs",
+              "RelativeDocumentMoniker": "WebAppUpload\\Models\\BaseProduct.cs",
+              "ToolTip": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Models\\BaseProduct.cs",
+              "RelativeToolTip": "WebAppUpload\\Models\\BaseProduct.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAADAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:50:42.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Views\\Home\\Contact.cshtml",
+              "RelativeDocumentMoniker": "WebAppUpload\\Views\\Home\\Contact.cshtml",
+              "ToolTip": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Views\\Home\\Contact.cshtml",
+              "RelativeToolTip": "WebAppUpload\\Views\\Home\\Contact.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T15:44:18.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebAppUpload\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\OSTAD\\Training\\b3\\WebAppUpload\\WebAppUpload\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebAppUpload\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAuwCkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T15:44:12.618Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

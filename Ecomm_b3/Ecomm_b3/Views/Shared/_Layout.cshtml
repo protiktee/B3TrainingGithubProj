@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="~/Ecomm_b3.styles.css" asp-append-version="true" />
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/js/controller/productcontroller.js"></script>
+    <script src="~/js/controller/cartcontroller.js"></script>
 </head>
 <body>
     <header>
@@ -28,7 +31,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" onclick="$('#dvCart').animate({right:0})">View Cart</a>
+                            <a class="nav-link text-dark" onclick="CartController.ShowPartialCartView()">View Cart</a>
                         </li>
                     </ul>
                 </div>
