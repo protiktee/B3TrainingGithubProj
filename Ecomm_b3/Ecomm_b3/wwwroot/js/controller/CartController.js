@@ -1,23 +1,15 @@
-﻿let TargetCartProducts = [];
-let TargetCartProductsCount = [];
-let ModifiedCartProduct = [];
-
+﻿let TargetCartProducts = []; 
+let ModifiedCartProduct = []; 
 var CartController = {
     AddToCart: (id) => {
-        let Products = ProductController.GetLocalStorageProduct();  
-        $.each(Products, function (index,obj) {
-            if (obj.id == id) {  
-                TargetCartProducts.push(obj);
-                var CartProductCount = {
-                    productid: obj.id,
-                    Count:1
-                }
-                TargetCartProductsCount.push(CartProductCount)
-            }
-        })
-        console.log(TargetCartProducts.length)
-        localStorage.setItem('CartProducts', JSON.stringify(TargetCartProducts));
-        CartController.ShowPartialCartView();
+        TargetCartProducts = CartController.ShowCart();
+        ProductController.SingleProduct(id, function (response) {
+            TargetCartProducts.push(response);
+            console.log(TargetCartProducts.length)
+            localStorage.setItem('CartProducts', JSON.stringify(TargetCartProducts));
+            CartController.AppendToCartView(response);
+        });  
+        
     },
     DeleteFromCart: (id) => { 
         let CartProducts = CartController.ShowCart();
@@ -30,7 +22,7 @@ var CartController = {
         TargetCartProducts = ModifiedCartProduct;
         console.log(TargetCartProducts.length)
         localStorage.setItem('CartProducts', JSON.stringify(ModifiedCartProduct));
-        CartController.ShowPartialCartView();
+        //CartController.ShowPartialCartView();
         alert('Product Deleted')
     },
     ShowCart: () => {
@@ -41,20 +33,53 @@ var CartController = {
         console.log(Products)
         return Products;
     },
-    ShowPartialCartView: () => {
-        let Products = CartController.ShowCart();
-        $('#tblPartialCartProduct').html('');
-        let trs = ` <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Delete</th>
-            </tr>`;
-        $.each(Products, function (index, obj) {
-            trs = trs + `<tr><td><img style='width:40px' src="${obj.thumbnail}"></td><td>${obj.title}</td><td>${obj.price}</td><td><a onclick='CartController.DeleteFromCart(${obj.id});$($(this).parent().parent()).remove()'>Delete</a></td></tr>`;
+    AppendToCartView: (obj) => {
+        let isexists = false;
+        $('body').find('.clsCartRow').each(function () {
+            if (obj.id == parseInt($(this).attr('id').split('_')[2])) {
+                isexists = true;
+            }
         })
-        $('#tblPartialCartProduct').html(trs);
-
+        console.log('-------------------------------')
+        console.log(obj.id)
+        console.log(isexists)
+        console.log('--------------end-----------------')
+        if (!isexists) {
+            $('#tblPartialCartProduct').append(`<tr id='cart_tr_${obj.id}' class='clsCartRow'><td><img style='width:40px' src="${obj.thumbnail}"></td><td>${obj.title}</td><td>${obj.price}</td><td><span class='clsPartialCount' id='cart_count_${obj.id}'>1</span></td><td><a onclick='CartController.DeleteFromCart(${obj.id});$($(this).parent().parent()).remove()'>Delete</a></td></tr>`)
+            //trs = trs + `<tr id='cart_tr_${obj.id}' class='clsCartRow'><td><img style='width:40px' src="${obj.thumbnail}"></td><td>${obj.title}</td><td>${obj.price}</td><td><span class='clsPartialCount' id='cart_count_${obj.id}'>1</span></td><td><a onclick='CartController.DeleteFromCart(${obj.id});$($(this).parent().parent()).remove()'>Delete</a></td></tr>`;
+        }
+        else {
+            $('#cart_count_' + obj.id).html(parseInt($('#cart_count_' + obj.id).html()) + 1)
+        } 
         $('#dvCart').animate({ right: 0 });
+
+    },
+    ShowPartialCartView: () => { 
+        $("#tblPartialCartProduct").find("tr:gt(0)").remove();
+        if ($('#tblPartialCartProduct').find('tr').length == 1) {
+            let products = CartController.ShowCart();
+            $.each(products, function (index, obj) {
+                let isexists = false;
+                $('body').find('.clsCartRow').each(function () {
+                    if (obj.id == parseInt($(this).attr('id').split('_')[2])) {
+                        isexists = true;
+                    }
+                })
+                console.log('-------------------------------')
+                console.log(obj.id)
+                console.log(isexists)
+                console.log('--------------end-----------------')
+                if (!isexists) {
+                    $('#tblPartialCartProduct').append(`<tr id='cart_tr_${obj.id}' class='clsCartRow'><td><img style='width:40px' src="${obj.thumbnail}"></td><td>${obj.title}</td><td>${obj.price}</td><td><span class='clsPartialCount' id='cart_count_${obj.id}'>1</span></td><td><a onclick='CartController.DeleteFromCart(${obj.id});$($(this).parent().parent()).remove()'>Delete</a></td></tr>`)
+                    //trs = trs + `<tr id='cart_tr_${obj.id}' class='clsCartRow'><td><img style='width:40px' src="${obj.thumbnail}"></td><td>${obj.title}</td><td>${obj.price}</td><td><span class='clsPartialCount' id='cart_count_${obj.id}'>1</span></td><td><a onclick='CartController.DeleteFromCart(${obj.id});$($(this).parent().parent()).remove()'>Delete</a></td></tr>`;
+                }
+                else {
+                    $('#cart_count_' + obj.id).html(parseInt($('#cart_count_' + obj.id).html()) + 1)
+                } 
+
+            })
+        }
+        $('#dvCart').animate({ right: 0 });
+       
     }
 }

@@ -1,11 +1,6 @@
 ﻿var ProductController = { 
     GetProducts: () => {
         $.get("https://dummyjson.com/products", function (response) {
-
-            if (response.products.length > 0) {
-                localStorage.setItem("Products", JSON.stringify(response.products));
-            }
-
             let data = '';
             $.each(response.products, function (index, obj) {
                 data = data + `
@@ -24,21 +19,9 @@
             $('#dvProducts').append(data);
         }) 
     },
-    GetLocalStorageProduct: () => {
-        let Products = [];
-        if (localStorage.getItem("Products") != undefined && localStorage.getItem("Products") != null && localStorage.getItem("Products") != '') {
-            Products = JSON.parse(localStorage.getItem("Products"));
-        }
-        else {
-            $.get("https://dummyjson.com/products", function (response) {
-                if (response.products.length > 0) {
-                    localStorage.setItem("Products", JSON.stringify(response.products));
-                    $.each(response.products, function (index, obj) {
-                        Products.push(obj);
-                    })
-                }
-            })
-        }
-        return Products;
+    SingleProduct: (ProductID, callback) => {
+        $.get("https://dummyjson.com/products/" + ProductID, function (response) {
+            callback(response);
+        })
     }
 } 
